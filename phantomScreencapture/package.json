@@ -1,0 +1,14 @@
+{
+  "name": "phantomScreencapture",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "debug": "~2.2.0",
+    "qiniu": "^6.1.10",
+    "system": "^1.0.4",
+    "webpage": "^0.3.0"
+  }
+}

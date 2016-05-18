@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>图表</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- ECharts单文件引入 -->
+    <script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
+  </head>
+  <body>
+<div id="main" style="width:600px;height: 400px;"></div>
+
+
+  <script>
+//console.log('<%= xData%>');
+//var barData={
+//  "xData":["4/24","4/25","4/26","4/27","4/28","4/29"],
+//  "yData":[300,250,400,410,480,510]
+//};
+//    var myChart = echarts.init(document.getElementById('main'));
+//    var option = {
+//      tooltip: {
+//        show: true
+//      },
+//      legend: {
+//        data:['用户数']
+//      },
+//      xAxis : [
+//        {
+//          type : 'category',
+////          data :'<%= xData%>'
+//          data :barData.xData
+//        }
+//      ],
+//      yAxis : [
+//        {
+//          type : 'value'
+//        }
+//      ],
+//      series : [
+//        {
+//          "name":"用户数",
+//          "type":"bar",
+////          "data":'<%= yData%>'
+//          "data":barData.yData
+//        }
+//      ],
+//      animation:false
+//    };
+//    myChart.setOption(option);
+
+
+      $.ajax({
+        type:'get',
+        url:'/bar',
+        dataType:'json',
+        success:function(data){
+          console.log("获取的数据："+JSON.stringify(data));
+          createBar(data);
+        },
+        error:function(error){
+          console.log("失败"+error);
+        }
+      });
+    function createBar(barData){
+      var myChart = echarts.init(document.getElementById('main'));
+      var option = {
+        tooltip: {
+          show: true
+        },
+        legend: {
+          data:['用户数']
+        },
+        xAxis : [
+          {
+            type : 'category',
+            data :barData.xData
+          }
+        ],
+        yAxis : [
+          {
+            type : 'value'
+          }
+        ],
+        series : [
+          {
+            "name":"用户数",
+            "type":"bar",
+            "data":barData.yData
+          }
+        ],
+        animation:false
+      };
+      // 为echarts对象加载数据
+      myChart.setOption(option);
+    }
+  </script>
+  </body>
+</html>
