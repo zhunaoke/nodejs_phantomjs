@@ -20,13 +20,10 @@
 2. `$ node routes/phantom.js`
 > 运行phantom.js文件，开始执行命令进行截图
 
-**
-  说明：本工程中被截图的http://localhost:3000/ 与 http://localhost:3000/table 两个url是需要将 另外一个工程 "phantom_pic" 运行之后，才能开始截图，
-  因为，"phantom_pic"工程是通过ajax请求获取数据并生成echarts 图表及表格，如果该工程没启动，在运行上面第2步时会报fail 失败。
-**
+*说明：本工程中被截图的http://localhost:3000/ 与 http://localhost:3000/table 两个url是需要将 另外一个工程"phantom_pic"，运行之后，才能开始截图，因为，"phantom_pic"工程是通过ajax请求获取数据并生成echarts图表及表格，如果该工程没启动，在运行上面第2步时会报fail 失败。*
 
-** 工程运行之后，可以看到 "routes/pictures 文件夹下多了很多张图片，这些就是通过phantomjs所截取的图片 **
-** 此外：在downloadUrl.txt文件中，可以看到文件上传到七牛后的下载地址，可以通过这些地址下载相应的图片 **
+*工程运行之后，可以看到 "routes/pictures 文件夹下多了很多张图片，这些就是通过phantomjs所截取的图片*
+*此外：在downloadUrl.txt文件中，可以看到文件上传到七牛后的下载地址，可以通过这些地址下载相应的图片*
 
 
 
