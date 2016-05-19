@@ -10,7 +10,7 @@
 1. `$ npm install`
 
 2. 配置启动文件，如图所示：
-![配置启动文件](/public/images/config.jpg "启动文件配置图")
+![配置启动文件](/images/config.jpg "启动文件配置图")
 
 3. 点击右上角绿色三角，Run
-![启动文件](/public/images/run.jpg "启动文件")
+![启动文件](/images/run.jpg "启动文件")
