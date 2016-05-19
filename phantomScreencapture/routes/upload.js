@@ -81,13 +81,12 @@ console.log("get the arguments:"+filePath+"---"+key+"--"+count+"---"+max);
                 });
                 // fs.appendFileSync(__dirname+'/downloadUrl.txt',JSON.stringify(signalArray)+'\r\n',{encoding:'utf8'});
 
-                if((count+1)==max){
-                    fs.appendFile(__dirname+'/downloadUrl.txt',"\r\n-----------------"+dateString+" "+timeString+"------------操作结束----------------------\r\n",function(err){
-                        if(err){console.log('fail')}
-                    });
-                    // fs.appendFileSync(__dirname+'/downloadUrl.txt',"\r-----------------"+dateString+" "+timeString+"------------操作结束----------------------\r\n\n",{encoding:'utf8'});
-
-                }
+                // if((count+1)==max){
+                //     fs.appendFile(__dirname+'/downloadUrl.txt',"\r\n-----------------"+dateString+" "+timeString+"------------操作结束----------------------\r\n",function(err){
+                //         if(err){console.log('fail')}
+                //     });
+                //     fs.appendFileSync(__dirname+'/downloadUrl.txt',"\r\n-----------------"+dateString+" "+timeString+"------------操作结束----------------------\r\n\n",{encoding:'utf8'});
+                // }
             } else {
                 // 上传失败， 处理返回代码
                 console.log(err);
